@@ -17,7 +17,6 @@ jobs:
       - name: Instalar dependencias
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r requirements.txt # This will use /home/robertoteigeiro/Documents/pytest/requirements.txt
       - name: Ejecutar pruebas con pytest
-        run: |
-          pytest
+        run: cd test-suma && pytest # Changed to run pytest within the test-suma directory
